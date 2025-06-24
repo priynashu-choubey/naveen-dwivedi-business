@@ -1,5 +1,5 @@
 
-import { Leaf, Menu } from "lucide-react";
+import { Building, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -8,22 +8,21 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-3">
-            <div className="bg-green-600 p-2 rounded-xl">
-              <Leaf className="h-8 w-8 text-white" />
+            <div className="bg-blue-600 p-2 rounded-xl">
+              <Building className="h-8 w-8 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Fresh Food Finder</h1>
-              <p className="text-sm text-gray-600">Discover Local • Eat Fresh</p>
+              <h1 className="text-2xl font-bold text-gray-900">Civil Engineering Services</h1>
+              <p className="text-sm text-gray-600">Beohari • Madhya Pradesh</p>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Find Food</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Categories</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 font-medium transition-colors">Markets</a>
-            <a href="#" className="text-gray-700 hover:text-green-600 font-medium transition-colors">About</a>
-            <Button className="bg-green-600 hover:bg-green-700">
-              List Your Business
+            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">सेवाएँ</a>
+            <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">हमारे बारे में</a>
+            <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">संपर्क</a>
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              संपर्क करें
             </Button>
           </nav>
           
