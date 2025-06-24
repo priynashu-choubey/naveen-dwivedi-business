@@ -1,7 +1,10 @@
 
 import { Building, Phone, MapPin, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -17,13 +20,12 @@ export const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              उत्कृष्टता और नवाचार के साथ आपके निर्माण सपनों को साकार करना।
-              जैसिंहनगर और आसपास के क्षेत्रों में विशेषज्ञ सेवाएँ।
+              {t('footer.description')}
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">संपर्क जानकारी</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.contact')}</h4>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
@@ -35,25 +37,25 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-blue-400" />
-                <span>सुबह 9 बजे - शाम 7 बजे</span>
+                <span>{t('footer.workingHours')}</span>
               </div>
             </div>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6">हमारी सेवाएँ</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.services')}</h4>
             <ul className="space-y-3 text-gray-300">
-              <li>निर्माण प्रबंधन</li>
-              <li>संरचना डिजाइन</li>
-              <li>पर्यावरणीय इंजीनियरिंग</li>
-              <li>जल निकासी प्रबंधन</li>
-              <li>सर्वेक्षण सेवाएँ</li>
+              <li>{t('service.construction.title')}</li>
+              <li>{t('service.structural.title')}</li>
+              <li>{t('service.environmental.title')}</li>
+              <li>{t('service.drainage.title')}</li>
+              <li>{t('service.survey.title')}</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Civil Engineering Services, Beohari. सभी अधिकार सुरक्षित।</p>
+          <p>&copy; {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

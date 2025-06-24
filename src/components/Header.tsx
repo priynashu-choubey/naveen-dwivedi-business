@@ -1,8 +1,12 @@
 
 import { Building, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LanguageToggle } from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Header = () => {
+  const { t } = useLanguage();
+
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -18,11 +22,12 @@ export const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">सेवाएँ</a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">हमारे बारे में</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">संपर्क</a>
+            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t('nav.services')}</a>
+            <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t('nav.about')}</a>
+            <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{t('nav.contact')}</a>
+            <LanguageToggle />
             <Button className="bg-blue-600 hover:bg-blue-700">
-              संपर्क करें
+              {t('nav.contactUs')}
             </Button>
           </nav>
           
